@@ -11,6 +11,7 @@
 body {
 	background-color: #fff;
 	color: #555;
+	max-height: 100vh;
 	font-family: 'Lato', 'Arial', sans-serif;
 	font-size: 20px;
 	font-weight: 300;
@@ -34,7 +35,7 @@ footer {
 /* ----- Global ----- */
 
 .row {
-	max-width: 1140px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -95,11 +96,14 @@ p {
 	float: right;
 	list-style: none;
 	margin-top: 40px;
+	margin-right: 50px;
 }
 
 .main-nav li {
 	display: inline-block;
 	margin-left: 40px;
+	font-size: 130%;
+	font-weight: bold;
 }
 
 .main-nav li a:link,
@@ -108,7 +112,6 @@ p {
 	color: #e67e22;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: 400;
 	border-bottom: 2px solid transparent;
 	-webkit-transition: border-bottom 0.5s;
 }
@@ -122,7 +125,7 @@ p {
 
 #main-heading {
 	position: absolute;
-	font-size: 110%;
+	font-size: 270%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -134,13 +137,13 @@ p {
 	transform: translate(-50%, -50%);
 }
 
-#about-heading {
+#my-adventures {
 	position: absolute;
-	font-size: 110%;
+	font-size: 200%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
-	top: 50%;
+	top: 80%;
 	left: 50%;
 	text-align: center;
 	-webkit-transform: translate(-50%, -50%);
@@ -148,13 +151,27 @@ p {
 	transform: translate(-50%, -50%);
 }
 
-#contact-heading {
+#about-me {
 	position: absolute;
-	font-size: 110%;
+	font-size: 200%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
-	top: 50%;
+	top: 80%;
+	left: 50%;
+	text-align: center;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#contact-me {
+	position: absolute;
+	font-size: 200%;
+	font-weight: bold;
+	color: #fff;
+	width: 1140px;
+	top: 80%;
 	left: 50%;
 	text-align: center;
 	-webkit-transform: translate(-50%, -50%);
@@ -164,7 +181,7 @@ p {
 
 #blog-heading {
 	position: absolute;
-	font-size: 110%;
+	font-size: 250%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -178,16 +195,14 @@ p {
 
 /* ----- My Adventures (Home page)------ */
 
+
+
 .container {
+	
 	width: 90%;
 	margin: 20px auto;
-	overflow: hidden;
+	
 	border: 2px solid #d6d6d6;
-}
-
-.my-adventures, .about-me, .contact-me {
-	text-align: center;
-	text-decoration-line: underline;
 }
 
 .wrapper {
@@ -196,20 +211,21 @@ p {
 	grid-template-columns: 1fr 1fr 1fr;
 	*/
 	grid-template-columns: repeat(3, 1fr);
-	
 }
 
 .main-photo {
 	display: inline-block;
-	float: left;
 	align-items: center;
+	/*
 	background-color: #e7e3d8;
+	*/
+	
 	border: 2px solid #d6d6d6;
+	
 }
 
 .main-photo img {
-	width: 325px;
-	height: 243px;
+	max-width: 100%;
 }
 
 .caption {
@@ -219,6 +235,13 @@ p {
 .main-photo a {
 	text-decoration: none;
 }
+
+/*
+.main-photo img {
+	width: 325px;
+	height: 243px;
+}
+*/
 
 #read-more {
 	background-color: #e67e22;
@@ -234,17 +257,20 @@ p {
 	color: #fff;
 	border-radius: 5px;
 	margin: 0;
-	padding: 10px;
+	padding: 10px;	
 	top: 0;
-	left: 0;
-	height: 100%;
-    width: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;  
+    height: 50px;
+	width: 100%;
     background: rgba(0, 0, 0, 0.7);
-    display: flex;
+	
+	text-align: center;
     align-items: center;
-    justify-content: center;
+	justify-content: center;
     transition: opacity 0.2s ease-in;
-    opacity: 0;
+	opacity: 0;
 }
 
 .main-photo:hover .read-more-btn {
@@ -362,6 +388,54 @@ input[type=submit] {
 
 .read-more-btn {
 	
+}
+
+/* Media queries */
+
+@media (max-width: 923px) {
+	.wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#main-heading {
+		font-size: 200%;
+	}
+	#my-adventures {
+		font-size: 175%;
+	}
+	#about-me {
+		font-size: 160%;
+	}
+	#contact-me {
+		font-size: 160%;
+	}
+	.main-nav li {
+		font-size: 120%;
+	}
+}
+
+@media (max-width: 600px) {
+   .wrapper {
+	   grid-template-columns: 1fr;
+   }
+   #main-heading {
+	   font-size: 170%;
+   }
+   #my-adventures {
+	   font-size: 135%;
+   }
+   #about-me {
+	   font-size: 120%;
+   }
+   #contact-me {
+	   font-size: 120%;
+   }
+   .main-nav li {
+	   font-size: 100%;
+   }
+   .main-photo img {
+	width: 440px;
+	
+}
 }
 
 
