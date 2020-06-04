@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hiking RVer</title>
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap">
+
+    <!-- jQuery 1.8 or later, 33 KB -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Fotorama from CDNJS, 19 KB -->
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="blog-page">
+                <div class="row">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="index.html"> Home </a>
+                        </li>
+                        <li>
+                            <a href="about.html"> About </a>
+                        </li>
+                        <li>
+                            <a href="contact.html"> Contact </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-wrapper">
+            <figure class="figure-container">
+                <div class="blog-heading">
+                    <h1>Hiking RVer Blog</h1>                         
+                </div>
+
+            <!-- Add images to <div class="fotorama"></div> -->
+            <div class="fotorama"
+                    data-width="100%"
+                    data-ratio="800/600"
+                    data-minwidth="200"
+                    data-maxwidth="1000"
+                    data-minheight="150"
+                    data-maxheight="100%"
+                    data-allowfullscreen="true"
+                    data-autoplay="true"
+                    data-stopautoplayontouch="false">
+                    
+                <img src="img/sawtooth_images/sawtooth1.jpg" alt="Photo of hiker in between contrasting flowers and rugged mountains">
+                
+            </div>
+            <figcaption>
+                <h2>Sawtooth Mountains</h2>
+            </figcaption>
+
+                <p></p>
+            </figure>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <p>
+                Copyright &copy; 2020 Hiking RVer - All Rights Reserved
+            </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
