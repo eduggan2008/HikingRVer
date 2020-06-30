@@ -9,8 +9,8 @@
 }
 
 body {
-	background-color: #fff;
-	color: #555;
+	background-color: rgb(236, 255, 254);
+	color: #222;
 	max-height: 100vh;
 	font-family: 'Lato', 'Arial', sans-serif;
 	font-size: 20px;
@@ -37,28 +37,6 @@ footer {
 .row {
 	max-width: 1400px;
 	margin: 0 auto;
-}
-
-/* ----- Headings ----- */
-
-h1, h2, h3 {
-	font-weight: 400;
-}
-
-h1 {
-	font-size: 240%;
-}
-
-h2 {
-	font-size: 180%;
-}
-
-h3 {
-	font-size: 110%;
-}
-
-p {
-	text-align: left;
 }
 
 /* ----- Main Headers ----- */
@@ -92,40 +70,47 @@ p {
 
 /* ----- Main Nav ----- */
 
+.main-nav-row {
+	position: relative;
+}
+
 .main-nav {
 	float: right;
 	list-style: none;
-	margin-top: 40px;
-	margin-right: 50px;
+	background-color: #e67e227a;	
+	font-size: 80%;
+	padding: 15px 15px 15px 0;	
+	top: 0px;
+	right: 50px;
+	position: absolute;
+	position: fixed;
 }
 
 .main-nav li {
 	display: inline-block;
-	margin-left: 40px;
-	font-size: 120%;
+	margin-left: 30px;
 	font-weight: bold;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.main-nav li a:link {
 	padding: 8px 0;
-	color: #e67e22;
-	text-decoration: none;
 	text-transform: uppercase;
-	border-bottom: 2px solid transparent;
-	-webkit-transition: border-bottom 0.5s;
+	border-bottom: 1px solid transparent;
+	-webkit-transition: border-bottom 0.8s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-	border-bottom: 2px solid #e67e22;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
 }
 
 /* ----- Page Headings ----- */
 
 #main-heading {
 	position: absolute;
-	font-size: 270%;
+	font-size: 180%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -139,7 +124,7 @@ p {
 
 #my-adventures {
 	position: absolute;
-	font-size: 200%;
+	font-size: 150%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -153,7 +138,7 @@ p {
 
 #about-me {
 	position: absolute;
-	font-size: 200%;
+	font-size: 150%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -167,7 +152,7 @@ p {
 
 #contact-me {
 	position: absolute;
-	font-size: 200%;
+	font-size: 150%;
 	font-weight: bold;
 	color: #fff;
 	width: 1140px;
@@ -179,6 +164,7 @@ p {
 	transform: translate(-50%, -50%);
 }
 
+/*
 #blog-heading {
 	position: absolute;
 	font-size: 150%;
@@ -192,35 +178,23 @@ p {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+*/
 
 /* ----- My Adventures (Home page)------ */
 
-.container {
-	
+.wrapper {
 	width: 90%;
 	margin: 20px auto;
-	/*
-	border: 2px solid #d6d6d6;
-	*/
-}
-
-.wrapper {
+	background-color: rgb(236, 255, 254);
 	display: grid;
-	/* 
-	grid-template-columns: 1fr 1fr 1fr;
-	*/
 	grid-template-columns: repeat(3, 1fr);
 }
 
 .main-photo {
 	display: inline-block;
 	align-items: center;
-	/*
-	background-color: #e7e3d8;
-	*/
-	
-	border: 2px solid #d6d6d6;
-	
+	background-color: #fff;
+	border: 1px solid #222;	
 }
 
 .main-photo img {
@@ -229,10 +203,6 @@ p {
 
 .caption {
 	text-align: center;
-}
-
-.main-photo a {
-	text-decoration: none;
 }
 
 /*
@@ -244,7 +214,7 @@ p {
 
 #read-more {
 	background-color: #e67e22;
-	border: 1px solid #e67e22;
+	border: 1px solid #000;
 	color: #fff;
 	margin-right: 15px;
 	-webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
@@ -262,18 +232,12 @@ p {
 	bottom: 0;
 	left: 0;  
     height: 50px;
-	width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-	
+	width: 120px;
+	background: rgba(0, 0, 0, 0.7);	
 	text-align: center;
     align-items: center;
 	justify-content: center;
     transition: opacity 0.2s ease-in;
-	opacity: 0;
-}
-
-.main-photo:hover .read-more-btn {
-	opacity: 1;
 }
 
 /* Buttons and Inputs */
@@ -349,12 +313,10 @@ input[type=submit] {
 	border: 10px solid #463838;
 }
 
-.figure-caption {
+.blog-caption h2 {
+	font-size: 100%;
 	text-align: center;
-}
-
-.read-more-btn {
-	
+	padding: 20px, auto;
 }
 
 /* Join Our List Form */
@@ -449,24 +411,30 @@ input[type=submit] {
 
 /* Media queries */
 
-@media (max-width: 923px) {
+
+
+@media (max-width: 800px) {
 	.wrapper {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	#main-heading {
-		font-size: 200%;
+		font-size: 150%;
 	}
 	#my-adventures {
-		font-size: 175%;
+		font-size: 120%;
 	}
 	#about-me {
-		font-size: 160%;
+		font-size: 120%;
 	}
 	#contact-me {
-		font-size: 160%;
+		font-size: 120%;
+	}
+	.main-nav {
+		right: 35px;
+		padding: 12px 12px 12px 0;
 	}
 	.main-nav li {
-		font-size: 110%;
+		font-size: 80%;
 	}
 }
 
@@ -475,22 +443,26 @@ input[type=submit] {
 	   grid-template-columns: 1fr;
    }
    #main-heading {
-	   font-size: 170%;
+	   font-size: 120%;
    }
    #my-adventures {
-	   font-size: 135%;
-   }
-   #about-me {
-	   font-size: 120%;
-   }
-   #contact-me {
-	   font-size: 120%;
-   }
-   .main-nav li {
 	   font-size: 100%;
    }
+   #about-me {
+	   font-size: 100%;
+   }
+   #contact-me {
+	   font-size: 100%;
+   }
+   .main-nav {
+	   right: 25px;
+	   padding: 10px 10px 10px 0;
+   }
+   .main-nav li {
+	   font-size: 70%;
+   }
    .main-photo img {
-	width: 440px;
+	width: 400px;
 	
 }
 }

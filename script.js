@@ -59,11 +59,7 @@ function getFieldName(input) {
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    if (firstName.value === '') {
-        showError(firstName, 'First Name is Required');
-    } else {
-        showSuccess(firstName);
-    }
+    
     
     checkRequired([firstName, lastName, email]);
     checkLength(firstName, 2, 25);
